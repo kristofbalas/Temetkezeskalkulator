@@ -203,8 +203,18 @@ export function CompanyDetailsModal({
                 <>
                   <Separator />
                   <div className="flex justify-between">
-                    <span>Urna fal</span>
-                    <span className="font-semibold">80.000 Ft</span>
+                    <span>Urna fal (50.000-80.000 Ft)</span>
+                    <span className="font-semibold">60.000 Ft</span>
+                  </div>
+                </>
+              )}
+              
+              {hasBurialPlace === "nem" && ceremonyType === "urnas" && (
+                <>
+                  <Separator />
+                  <div className="flex justify-between">
+                    <span>Urna sírhely</span>
+                    <span className="font-semibold">60.000 Ft</span>
                   </div>
                 </>
               )}
@@ -213,7 +223,17 @@ export function CompanyDetailsModal({
                 <>
                   <Separator />
                   <div className="flex justify-between">
-                    <span>Sírhely</span>
+                    <span>Sírhely (100.000-150.000 Ft)</span>
+                    <span className="font-semibold">120.000 Ft</span>
+                  </div>
+                </>
+              )}
+              
+              {hasBurialPlace === "nem" && ceremonyType === "koporsos" && (
+                <>
+                  <Separator />
+                  <div className="flex justify-between">
+                    <span>Sírhely (100.000-150.000 Ft)</span>
                     <span className="font-semibold">120.000 Ft</span>
                   </div>
                 </>

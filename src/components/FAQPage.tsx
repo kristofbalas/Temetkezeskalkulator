@@ -84,7 +84,7 @@ export function FAQPage({ onNavigate }: FAQPageProps) {
   return (
     <div className="bg-white min-h-screen w-full">
       {/* Hero Section */}
-      <div className="bg-[#FCF4D7] rounded-bl-[40px] rounded-br-[40px] pb-12 md:pb-16">
+      <div className="bg-[#f3edda] rounded-bl-[40px] rounded-br-[40px] pb-12 md:pb-16">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
           {/* Header with Logo and Navigation */}
           <div className="flex items-center justify-between py-6">

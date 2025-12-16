@@ -368,11 +368,11 @@ export function ResultsList({
                   <div className="flex items-start gap-4">
                     {/* Company Image - Large */}
                     {company.image && (
-                      <div className="overflow-hidden rounded-lg shadow-md flex-shrink-0">
+                      <div className="overflow-hidden rounded-lg shadow-md flex-shrink-0 bg-white">
                         <ImageWithFallback
                           src={company.image}
                           alt={`${company.name} szolgáltatás`}
-                          className="h-32 w-40 object-cover"
+                          className="h-32 w-40 object-contain"
                         />
                       </div>
                     )}

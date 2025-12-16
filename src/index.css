@@ -1329,8 +1329,8 @@
     background-color: #31587a;
   }
 
-  .bg-\[\#FCF4D7\] {
-    background-color: #fcf4d7;
+  .bg-\[\#f3edda\] {
+    background-color: #f3edda;
   }
 
   .bg-\[rgb\(49\,88\,122\)\] {
@@ -3070,7 +3070,7 @@
 
 :root {
   --font-size: 16px;
-  --background: #fcf4d7;
+  --background: #f3edda;
   --foreground: #2c3e50;
   --card: #fff;
   --card-foreground: #2c3e50;

@@ -17,6 +17,11 @@ import { ThankYouScreen } from "./components/ThankYouScreen";
 import { PrintableReceipt } from "./components/PrintableReceipt";
 import { Toaster } from "./components/ui/sonner";
 import { toast } from "sonner@2.0.3";
+import imgTemetkezes1 from "figma:asset/1fb4c986ed719cdfd5b554052f6ccf8b832f7be9.png";
+import imgTemetkezes2 from "figma:asset/5837b14e9549c3b49b98b1197e38e3b77cd5059f.png";
+import imgTemetkezes3 from "figma:asset/334aa22c5dceeb59afb66a63b5408e2f910f6b08.png";
+import imgTemetkezes4 from "figma:asset/842541a78e938db10896c0b214a78cce278d332a.png";
+import imgTemetkezes5 from "figma:asset/6db100fb20bf218ee69ebc7f744b1132a01c6d91.png";
 
 type Screen =
   | "home"
@@ -31,157 +36,66 @@ type Screen =
   | "receipt";
 
 // Mock data for funeral companies
-const mockCompanies: (FuneralCompany & {
-  description: string;
-  serviceBreakdown: any;
-  offices: string[];
-  contact: any;
-  image?: string;
-})[] = [
+const companies: FuneralCompany[] = [
   {
     id: "1",
-    name: "Aqua Memória Temetkezés",
-    logo: "https://images.unsplash.com/photo-1557683316-973673baf926?w=200",
-    image: "https://images.unsplash.com/photo-1759604218242-bb2e68ba7477?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400",
+    name: "Alcsík Temetkezés",
+    logo: imgTemetkezes1,
+    image: imgTemetkezes1,
     price: 400000,
     rating: 4.8,
     reviewCount: 142,
     districts: ["I.", "II.", "XII."],
     earliestCeremony: 6,
     services: ["Nyugdíjfolyósító"],
-    description:
-      "Családias légkörben, professzionális szolgáltatással segítünk méltó búcsút venni szeretteitől. Több mint 25 éves tapasztalattal.",
-    serviceBreakdown: {
-      hamvasztas: 160000,
-      elszallitas: 50000,
-      urna: 30000,
-      bucsuztatas: 120000,
-      egyeb: 40000,
-    },
-    offices: ["Budapest, I. kerület, Ybl Miklós tér 9.", "Budapest, XII. kerület, Alkotás utca 53."],
-    contact: {
-      phone: "06704090553",
-      email: "info@temetkezeskalkulator.hu",
-    },
   },
   {
     id: "2",
-    name: "Víztükör Temetkezési Szolgálat",
-    logo: "https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?w=200",
-    image: "https://images.unsplash.com/photo-1618322928259-b8e2a0db02ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400",
-    price: 1150000,
+    name: "Glória Temetkezési Vállalkozás",
+    logo: imgTemetkezes2,
+    image: imgTemetkezes2,
+    price: 450000,
     rating: 4.9,
-    reviewCount: 98,
-    districts: ["V.", "VI.", "VII.", "VIII."],
-    earliestCeremony: 7,
+    reviewCount: 89,
+    districts: ["V.", "VI.", "VII."],
+    earliestCeremony: 3,
     services: [],
-    description:
-      "Modern, empatikus temetkezési szolgáltatás a belvárosban. Éjjel-nappal elérhetőek vagyunk. Speciális vízparti búcsúztatási lehetőségek.",
-    serviceBreakdown: {
-      hamvasztas: 170000,
-      elszallitas: 60000,
-      urna: 200000,
-      bucsuztatas: 650000,
-      egyeb: 70000,
-    },
-    offices: [
-      "Budapest, V. kerület, Kossuth Lajos utca 10.",
-      "Budapest, VIII. kerület, Rákóczi út 42.",
-    ],
-    contact: {
-      phone: "06704090553",
-      email: "info@temetkezeskalkulator.hu",
-    },
   },
   {
     id: "3",
-    name: "Dunakanyar Kegyeleti Intézet",
-    logo: "https://images.unsplash.com/photo-1557682260-96773eb01377?w=200",
-    image: "https://images.unsplash.com/photo-1758334587590-011cf260c10f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400",
-    price: 680000,
+    name: "PRG Temetkezés",
+    logo: imgTemetkezes3,
+    image: imgTemetkezes3,
+    price: 380000,
     rating: 4.7,
-    reviewCount: 176,
-    districts: ["III.", "IV.", "XIII.", "XV."],
-    earliestCeremony: 8,
+    reviewCount: 201,
+    districts: ["III.", "IV.", "XIII."],
+    earliestCeremony: 5,
     services: ["Trombitás biztosítása"],
-    description:
-      "Hagyományos értékek modern kivitelezésben. Tapasztalt munkatársaink készen állnak segíteni a legnehezebb időszakban is.",
-    serviceBreakdown: {
-      hamvasztas: 150000,
-      elszallitas: 45000,
-      urna: 30000,
-      bucsuztatas: 400000,
-      egyeb: 55000,
-    },
-    offices: [
-      "Budapest, III. kerület, Bécsi út 85.",
-      "Budapest, XIII. kerület, Váci út 120.",
-    ],
-    contact: {
-      phone: "06704090553",
-      email: "info@temetkezeskalkulator.hu",
-    },
   },
   {
     id: "4",
-    name: "Tengerkék Búcsúztató",
-    logo: "https://images.unsplash.com/photo-1557683311-eac922347aa1?w=200",
-    image: "https://images.unsplash.com/photo-1654751131622-6681fb839925?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400",
-    price: 580000,
-    rating: 5.0,
-    reviewCount: 64,
-    districts: ["II.", "XI.", "XII.", "XXII."],
-    earliestCeremony: 9,
-    services: [
-      "Nyugdíjfolyósító",
-      "Trombitás biztosítása",
-    ],
-    description:
-      "Prémium minőségű temetkezési szolgáltatások egyedi megoldásokkal. Különleges figyelmet fordítunk minden részletre.",
-    serviceBreakdown: {
-      hamvasztas: 165000,
-      elszallitas: 55000,
-      urna: 30000,
-      bucsuztatas: 280000,
-      egyeb: 50000,
-    },
-    offices: [
-      "Budapest, II. kerület, Margit körút 64.",
-      "Budapest, XI. kerület, Bartók Béla út 98.",
-    ],
-    contact: {
-      phone: "06704090553",
-      email: "info@temetkezeskalkulator.hu",
-    },
+    name: "ÍRISZ",
+    logo: imgTemetkezes4,
+    image: imgTemetkezes4,
+    price: 520000,
+    rating: 4.9,
+    reviewCount: 156,
+    districts: ["VIII.", "IX.", "X."],
+    earliestCeremony: 2,
+    services: [],
   },
   {
     id: "5",
-    name: "Folyami Nyugalom Temetkezés",
-    logo: "https://images.unsplash.com/photo-1557682268-e3955ed5d83f?w=200",
-    image: "https://images.unsplash.com/photo-1748898420118-0cc7548c0af6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400",
-    price: 1050000,
+    name: "Schaffer és Wagner Temetkezési Kft.",
+    logo: imgTemetkezes5,
+    image: imgTemetkezes5,
+    price: 410000,
     rating: 4.6,
-    reviewCount: 201,
-    districts: ["IX.", "X.", "XVIII.", "XIX.", "XX."],
-    earliestCeremony: 10,
+    reviewCount: 94,
+    districts: ["XI.", "XIV.", "XV."],
+    earliestCeremony: 4,
     services: [],
-    description:
-      "Kedvező árakon, megbízható szolgáltatás. Több pesti kerületben is elérhetőek vagyunk, gyors reagálási idővel.",
-    serviceBreakdown: {
-      hamvasztas: 145000,
-      elszallitas: 40000,
-      urna: 200000,
-      bucsuztatas: 600000,
-      egyeb: 65000,
-    },
-    offices: [
-      "Budapest, IX. kerület, Üllői út 123.",
-      "Budapest, X. kerület, Kőbányai út 45.",
-    ],
-    contact: {
-      phone: "06704090553",
-      email: "info@temetkezeskalkulator.hu",
-    },
   },
 ];
 
@@ -218,7 +132,7 @@ export default function App() {
   };
 
   const handleViewDetails = (company: FuneralCompany) => {
-    const fullCompany = mockCompanies.find((c) => c.id === company.id);
+    const fullCompany = companies.find((c) => c.id === company.id);
     if (fullCompany) {
       setDetailsCompany(fullCompany as CompanyDetails);
       setDetailsModalOpen(true);
@@ -233,7 +147,7 @@ export default function App() {
       fullCompany = company as CompanyDetails;
     } else {
       // Find the full company data
-      const foundCompany = mockCompanies.find((c) => c.id === company.id);
+      const foundCompany = companies.find((c) => c.id === company.id);
       if (!foundCompany) return;
       fullCompany = foundCompany as CompanyDetails;
     }
@@ -340,7 +254,7 @@ export default function App() {
       {currentScreen === "results" && (
         <>
           <ResultsList
-            companies={mockCompanies}
+            companies={companies}
             onViewDetails={handleViewDetails}
             onCompare={handleCompare}
             onSelectCompany={handleSelectCompany}

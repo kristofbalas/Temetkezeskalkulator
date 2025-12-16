@@ -324,7 +324,7 @@ export function CalculatorForm({ onComplete, onBack, initialData, overallProgres
           {/* Question 5: Farewell Type */}
           <div className="space-y-3">
             <div className="flex items-center gap-2">
-              <Label>Milyen búcsúztatást szeretne?</Label>
+              <Label>Milyen búcsúztatási típust szeretne?</Label>
             </div>
             <RadioGroup
               value={formData.farewellType}
@@ -404,6 +404,7 @@ export function CalculatorForm({ onComplete, onBack, initialData, overallProgres
                   <SelectItem value="pestszentlorinc">Pestszentlőrinci temető</SelectItem>
                   <SelectItem value="budafok">Budafoki temető</SelectItem>
                   <SelectItem value="cinkota">Cinkotai temető</SelectItem>
+                  <SelectItem value="nemtudom">Nem tudom</SelectItem>
                 </SelectContent>
               </Select>
             </div>
