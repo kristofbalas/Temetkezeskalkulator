@@ -15,6 +15,7 @@ import {
 import { SummaryScreen } from "./components/SummaryScreen";
 import { ThankYouScreen } from "./components/ThankYouScreen";
 import { PrintableReceipt } from "./components/PrintableReceipt";
+import { GalleryPage } from "./components/GalleryPage";
 import { Toaster } from "./components/ui/sonner";
 import { toast } from "sonner@2.0.3";
 import imgTemetkezes1 from "figma:asset/1fb4c986ed719cdfd5b554052f6ccf8b832f7be9.png";
@@ -33,7 +34,8 @@ type Screen =
   | "results"
   | "summary"
   | "thankyou"
-  | "receipt";
+  | "receipt"
+  | "gallery";
 
 // Mock data for funeral companies
 const companies: FuneralCompany[] = [
@@ -325,6 +327,10 @@ export default function App() {
             onClose={handleCloseReceipt}
           />
         )}
+
+      {currentScreen === "gallery" && (
+        <GalleryPage onBack={() => setCurrentScreen("home")} />
+      )}
     </div>
   );
 }

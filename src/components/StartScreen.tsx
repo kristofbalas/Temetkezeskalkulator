@@ -55,6 +55,12 @@ export function StartScreen({ onStart, onNavigate }: StartScreenProps) {
               >
                 Kapcsolat
               </button>
+              <button
+                onClick={() => handleNavClick('gallery')}
+                className="text-red-600 px-4 py-2 rounded-[8px] text-[14px] leading-[20px] hover:bg-red-50 transition-colors font-medium border border-red-200"
+              >
+                Képgaléria (MENTÉS)
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
