@@ -50,6 +50,19 @@ const companies: FuneralCompany[] = [
     districts: ["I.", "II.", "XII."],
     earliestCeremony: 6,
     services: ["Nyugdíjfolyósító"],
+    description: "Több évtizedes tapasztalattal rendelkező családi vállalkozás, amely teljes körű ügyintézést vállal Budapest egész területén. Kiemelt figyelmet fordítunk a hozzátartozók lelki támogatására és a kegyeleti szempontok maximális betartására.",
+    serviceBreakdown: {
+      hamvasztas: 180000,
+      elszallitas: 45000,
+      urna: 35000,
+      bucsuztatas: 40000,
+      egyeb: 100000
+    },
+    offices: ["1012 Budapest, Márvány utca 18.", "1126 Budapest, Királyhágó tér 8."],
+    contact: {
+      phone: "+36 1 356 7890",
+      email: "info@alcsiktemetkezes.hu"
+    }
   },
   {
     id: "2",
@@ -62,6 +75,19 @@ const companies: FuneralCompany[] = [
     districts: ["V.", "VI.", "VII."],
     earliestCeremony: 3,
     services: [],
+    description: "Elegáns és méltóságteljes búcsúztatások szervezése. Széles választékban kínálunk kellékeket, és segítünk a hivatalos ügyek gyors és zökkenőmentes intézésében.",
+    serviceBreakdown: {
+      hamvasztas: 200000,
+      elszallitas: 50000,
+      urna: 45000,
+      bucsuztatas: 55000,
+      egyeb: 100000
+    },
+    offices: ["1054 Budapest, Bajcsy-Zsilinszky út 45."],
+    contact: {
+      phone: "+36 1 269 4567",
+      email: "iroda@gloriatemetkezes.hu"
+    }
   },
   {
     id: "3",
@@ -74,6 +100,19 @@ const companies: FuneralCompany[] = [
     districts: ["III.", "IV.", "XIII."],
     earliestCeremony: 5,
     services: ["Trombitás biztosítása"],
+    description: "Megbízható szolgáltatás kedvező áron. Célunk, hogy levegyük a terhet a gyászoló családok válláról a nehéz időkben. Rugalmas ügyintézés és átlátható árazás.",
+    serviceBreakdown: {
+      hamvasztas: 170000,
+      elszallitas: 40000,
+      urna: 30000,
+      bucsuztatas: 40000,
+      egyeb: 100000
+    },
+    offices: ["1134 Budapest, Váci út 45.", "1042 Budapest, Árpád út 56."],
+    contact: {
+      phone: "+36 1 345 6789",
+      email: "kapcsolat@prgtemetkezes.hu"
+    }
   },
   {
     id: "4",
@@ -86,6 +125,19 @@ const companies: FuneralCompany[] = [
     districts: ["VIII.", "IX.", "X."],
     earliestCeremony: 2,
     services: [],
+    description: "Exkluzív temetkezési szolgáltatások, egyedi igények teljes körű kiszolgálása. Professzionális stábunk minden részletre odafigyel, hogy méltó búcsút vehessen szerettétől.",
+    serviceBreakdown: {
+      hamvasztas: 220000,
+      elszallitas: 60000,
+      urna: 60000,
+      bucsuztatas: 80000,
+      egyeb: 100000
+    },
+    offices: ["1095 Budapest, Mester utca 34."],
+    contact: {
+      phone: "+36 1 456 7890",
+      email: "info@irisztemetkezes.hu"
+    }
   },
   {
     id: "5",
@@ -98,6 +150,19 @@ const companies: FuneralCompany[] = [
     districts: ["XI.", "XIV.", "XV."],
     earliestCeremony: 4,
     services: [],
+    description: "Hagyománytisztelő temetkezési vállalkozás, korrekt árakkal és empátiával. Segítünk a gyász feldolgozásában azzal, hogy minden szervezési feladatot átvállalunk.",
+    serviceBreakdown: {
+      hamvasztas: 190000,
+      elszallitas: 45000,
+      urna: 35000,
+      bucsuztatas: 40000,
+      egyeb: 100000
+    },
+    offices: ["1117 Budapest, Fehérvári út 89.", "1145 Budapest, Thököly út 112."],
+    contact: {
+      phone: "+36 1 567 8901",
+      email: "ugyintezes@schafferwagner.hu"
+    }
   },
 ];
 

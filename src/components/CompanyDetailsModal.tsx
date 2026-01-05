@@ -99,7 +99,7 @@ export function CompanyDetailsModal({
                 <ImageWithFallback
                   src={company.image}
                   alt={`${company.name} szolgáltatás`}
-                  className="h-24 w-32 object-cover"
+                  className="h-24 w-32 object-contain"
                 />
               </div>
             )}

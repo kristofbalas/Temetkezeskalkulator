@@ -63,9 +63,6 @@
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --color-red-50: oklch(.971 .013 17.38);
-    --color-red-200: oklch(.885 .062 18.334);
-    --color-red-600: oklch(.577 .245 27.325);
     --color-blue-50: oklch(.97 .014 254.604);
     --color-blue-200: oklch(.882 .059 254.128);
     --color-blue-800: oklch(.424 .199 265.638);
@@ -1324,10 +1321,6 @@
     }
   }
 
-  .border-red-200 {
-    border-color: var(--color-red-200);
-  }
-
   .border-transparent {
     border-color: #0000;
   }
@@ -1939,10 +1932,6 @@
     color: var(--primary-foreground);
   }
 
-  .text-red-600 {
-    color: var(--color-red-600);
-  }
-
   .text-secondary-foreground {
     color: var(--secondary-foreground);
   }
@@ -2238,12 +2227,6 @@
       .hover\:bg-primary\/90:hover {
         background-color: color-mix(in oklab, var(--primary) 90%, transparent);
       }
-    }
-  }
-
-  @media (hover: hover) {
-    .hover\:bg-red-50:hover {
-      background-color: var(--color-red-50);
     }
   }
 
